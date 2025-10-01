@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise</title>
+
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .main {
+        background: #fffbe7;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 5px 5px blue;
+        text-align: center;
+    }
+
+    .main p {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: red;
+        margin-bottom: 20px;
+    }
+
+    .main button {
+        background: black;
+        color: #fff;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 8px;
+        transition: 0.3s ease;
+
+    }
+</style>
+
+<body>
+
+    <div class="main">
+        <p>Simple Grading System </p>
+        <button onclick="gradeSystem()" type="button">Check my Console</button>
+    </div>
+
+
+    <script>
+
+        function gradeSystem(score) {
+            if (score >= 90) {
+                return `Score: ${score} → Grade: A`
+            } else if (score >= 80 || score == 89) {
+                return `Score: ${score} → Grade: B`
+            } else if (score >= 70 || score == 79) {
+                return `Score: ${score} → Grade: C`
+            } else if (score >= 60 || score == 69) {
+                return `Score: ${score} → Grade: D`
+            } else {
+                return `Score: ${score} → Grade: F`
+            }
+        }
+
+
+        // Check my performance function
+        let score = gradeSystem(68);
+        console.log(`${score}`);
+
+        console.log(gradeSystem(95));
+        console.log(gradeSystem(82));
+        console.log(gradeSystem(74));
+        console.log(gradeSystem(65));
+        console.log(gradeSystem(50));
+
+        
+        // console.log()
+
+
+
+
+
+    </script>
+</body>
+
+</html>
